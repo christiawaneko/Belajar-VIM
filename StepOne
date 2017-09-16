@@ -1,1 +1,63 @@
 Step One
+
+Vim memiliki 3 Mode dasar : 
+- Mode Normal  : digunakan untuk mode kusor dan berpindah antar file
+- Mode Insert  : tombol 'i' - bebas menulis apapun | 'esc' untuk kembali ke mode normal 
+- Mode Command : tombol awal ':' mode ini adalah mode perintah
+------------------------
+------Insert Mode ------
+i = masuk ke mode Insert
+I = masuk ke mode Insert - kusor berada di paling awal
+a = masuk ke mode Insert dan berada setelah kursor
+A = masuk ke mode Insert - kusor berada di paling akhir
+o = masuk ke mode Insert dan menambahkan baris kosong di bawah
+O = masuk ke mode Insert dan menambahkan baris kosong di atas
+
+------ Navigasi -------
+h = kiri
+j = bawah
+k = atas
+l = kanan
+w = berpindah ke kata berikutnya ( tanpa mengabaikan tanda baca ) 
+W = berpindah ke kata berkutnya - (mengabaian tanda baca)
+b = berpindah ke kata sebelumnya ( tanpa mengabaikan tanda baca ) 
+B = berpindah ke kata sebelumnya - (mengabaika tanda baca) 
+e = berpindah ke kata berikutnya dengan kusor belakang "
+E = berpindah ke kata berikutnya dengan kusor belakang *
+0 = berpindah ke awal baris 
+^ = berpindah ke awal baris (kata)
+$ = berpindah ke akhir baris
+gg = berpindah ke baris teratas
+G = berpindah ke baris terbawah
+menekan angka + gg = berpindah ke baris yang di tuju
+
+-- Find --
+f = find (exm : f_ = mencari _ )
+t = meletakan kusor didepan karakter yang di cari
+
+Note : 
+-" = tanpa mengabaikan tanda baca
+-* = mengabaikan tanda baca
+
+-----------------------
+Menghapus Text
+x  =  Menghapus karakter yang terdapat di kursor
+X  : Menghapus karakter sebelum kursor
+dd : Mengapus satu baris
+D  : menghapus mulai dari awal kusor
+dw : menghapus 1kata ( hapus dan movement )
+d+movement ( exm : df_ = menghapus hingga _ )
+d+movement ( exm : d3j = menghapus 3 ke arah bawah )
+
+---------------------
+u  : Pembatalkan penghapusan (undo)
+U  : Pembatalkan penghapusan semua dalam satu line (undo)
+crtl + r : Mengembalikan penghapusan (redo)
+
+---- Mode Command -----
+:w namafile = untuk menyimpan file 
+:q          = keluar dari vim
+:e namafile = membuka file
+:wq         = keluar dan menyimpan file
+:q!         = keluar tanpa menyimpan file
+:set number = menampilkan nomor baris
