@@ -12,7 +12,7 @@ a = masuk ke mode Insert dan berada setelah kursor
 A = masuk ke mode Insert - kusor berada di paling akhir
 o = masuk ke mode Insert dan menambahkan baris kosong di bawah
 O = masuk ke mode Insert dan menambahkan baris kosong di atas
-
+s = masuk ke mode Insert dan menghapus huruf yand ada di kursor 
 ------ Navigasi -------
 h = kiri
 j = bawah
@@ -49,6 +49,25 @@ dw : menghapus 1kata ( hapus dan movement )
 d+movement ( exm : df_ = menghapus hingga _ )
 d+movement ( exm : d3j = menghapus 3 ke arah bawah )
 
+Repaced ------------
+r : mengganti huruf atau replace huruf
+c : mengganti atau change langsung ke mode insert
+cc : menghapus satu baris dan langsung ke mode insert 
+C : menghapus kata depan kursor dan langsung ke mode insert 
+
+--- Copy , Paste, Cut ---- digabungkan dengan movement ya
+y : Copy (exm : ye = copy + movement e )
+yy : copy 1 baris
+p : paste 
+P : Paste di belakang kusor
+d : cut ( exm : dt, = cut + meletakan kursor di , )
+
+----- Search --------
+/+text (exm : /resources) - kebawah
+?+text (exm : ?resources) - keatas
+n : mencari next search - kebawah
+N : mencari next serach - keatas
+
 ---------------------
 u  : Pembatalkan penghapusan (undo)
 U  : Pembatalkan penghapusan semua dalam satu line (undo)
@@ -61,3 +80,6 @@ crtl + r : Mengembalikan penghapusan (redo)
 :wq         = keluar dan menyimpan file
 :q!         = keluar tanpa menyimpan file
 :set number = menampilkan nomor baris
+:set hlsearch = untuk menampilkan hightligh
+:set nohlsearch = untuk menghilangkan hightlight
+:set incsearch = langsung mencari hasil
